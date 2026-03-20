@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookaBot — The Future of Hospitality</title>
+  <meta name="description"
+    content="BookaBot (BaB) — Premium hospitality robot rental for weddings, schools, colleges, and corporate events in Tamil Nadu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="BookaBot Home">
+        <svg viewBox="0 0 100 100" height="32" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">
+          <rect width="100" height="100" rx="20" fill="#000000" />
+          <!-- Antenna -->
+          <line x1="50" y1="25" x2="50" y2="35" stroke="#C6FF35" stroke-width="5" stroke-linecap="round" />
+          <circle cx="50" cy="22" r="4" fill="#C6FF35" />
+          <!-- Head pill -->
+          <rect x="22" y="38" width="56" height="28" rx="14" fill="none" stroke="#C6FF35" stroke-width="5" />
+          <!-- Eyes -->
+          <circle cx="38" cy="52" r="5.5" fill="#C6FF35" />
+          <circle cx="62" cy="52" r="5.5" fill="#C6FF35" />
+        </svg>
+        <svg viewBox="0 0 240 50" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+            letter-spacing="-1.5">B</text>
+          <!-- Robot Face 'oo' -->
+          <g transform="translate(30, 10)">
+            <rect x="0" y="0" width="56" height="28" rx="14" fill="none" stroke="var(--accent)" stroke-width="6" />
+            <circle cx="17" cy="14" r="5" fill="var(--accent)" />
+            <circle cx="39" cy="14" r="5" fill="var(--accent)" />
+            <line x1="28" y1="0" x2="28" y2="-8" stroke="var(--accent)" stroke-width="4" />
+            <circle cx="28" cy="-8" r="3.5" fill="var(--accent)" />
+          </g>
+          <text x="88" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+            letter-spacing="-1.5">kaBot</text>
+        </svg>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#robots">Meet Our Robots</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#perfect-for">Ideas</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#cta-final" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-text" aria-hidden="true">BaB</div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Hospitality, Reimagined</p>
+        <h1 class="hero-title">Booka<span>Bot</span></h1>
+        <p class="hero-tagline">The Future of Hospitality</p>
+        <p class="hero-desc">Bring intelligent, charming robots to your weddings, corporate events, and school functions
+          across Tamil Nadu. Impress your guests with the future, today.</p>
+        <div class="hero-actions">
+          <a href="#features" class="btn btn-primary" id="hero-cta-primary">Explore More</a>
+          <a href="#features" class="btn btn-outline" id="hero-cta-secondary">How It Works</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-robot-wrapper">
+          <!-- SVG Robot Illustration -->
+          <svg class="hero-robot" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-label="BookaBot Robot Illustration">
+            <!-- Shadow -->
+            <ellipse cx="200" cy="480" rx="100" ry="15" fill="#E0E0E0" opacity="0.5" />
+            <!-- Body -->
+            <rect x="130" y="200" width="140" height="180" rx="30" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="2" />
+            <!-- Chest accent -->
+            <rect x="170" y="250" width="60" height="6" rx="3" fill="#C6FF35" />
+            <rect x="180" y="266" width="40" height="4" rx="2" fill="#E0E0E0" />
+            <!-- Screen/Tray on right hand -->
+            <rect x="280" y="260" width="70" height="50" rx="10" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="2" />
+            <circle cx="295" cy="285" r="5" fill="#C6FF35" opacity="0.6" />
+            <circle cx="315" cy="285" r="5" fill="#C6FF35" opacity="0.4" />
+            <circle cx="335" cy="285" r="5" fill="#C6FF35" opacity="0.6" />
+            <!-- Right Arm -->
+            <rect x="270" y="230" width="20" height="80" rx="10" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="2" />
+            <!-- Left Arm -->
+            <rect x="110" y="230" width="20" height="70" rx="10" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="2" />
+            <!-- Head -->
+            <rect x="150" y="100" width="100" height="100" rx="30" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="2" />
+            <!-- Eyes -->
+            <circle cx="180" cy="145" r="10" fill="#000000" />
+            <circle cx="220" cy="145" r="10" fill="#000000" />
+            <circle cx="183" cy="142" r="3" fill="#FFFFFF" />
+            <circle cx="223" cy="142" r="3" fill="#FFFFFF" />
+            <!-- Smile -->
+            <path d="M185 165 Q200 178 215 165" stroke="#000000" stroke-width="3" stroke-linecap="round" fill="none" />
+            <!-- Antenna -->
+            <line x1="200" y1="100" x2="200" y2="75" stroke="#E0E0E0" stroke-width="3" />
+            <circle cx="200" cy="70" r="8" fill="#C6FF35" />
+            <!-- Wheels/Base -->
+            <rect x="155" y="380" width="90" height="30" rx="15" fill="#E8E8E8" stroke="#E0E0E0" stroke-width="2" />
+            <circle cx="175" cy="410" r="12" fill="#D0D0D0" stroke="#C0C0C0" stroke-width="2" />
+            <circle cx="225" cy="410" r="12" fill="#D0D0D0" stroke="#C0C0C0" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <p class="section-eyebrow">What BookaBot Does</p>
+      <h2 class="section-title">Three Things, Done Perfectly</h2>
+      <div class="features-grid">
+        <div class="feature-card" id="feature-welcome">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="14" r="8" stroke="currentColor" stroke-width="2.5" />
+              <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <path d="M36 12l4-4M36 8h4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Welcome Guests</h3>
+          <p class="feature-desc">BaB greets every guest with warmth and charm — in English, Tamil, or Hindi. First
+            impressions, perfected.</p>
+        </div>
+        <div class="feature-card" id="feature-serve">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="24" cy="32" rx="16" ry="4" stroke="currentColor" stroke-width="2.5" />
+              <path d="M8 32V28c0-8.837 7.163-16 16-16s16 7.163 16 16v4" stroke="currentColor" stroke-width="2.5" />
+              <line x1="24" y1="12" x2="24" y2="8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="24" cy="6" r="2" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Serve Refreshments</h3>
+          <p class="feature-desc">Drinks, snacks, and sweets — served elegantly on a gliding tray. No spills, no delays,
+            all smiles.</p>
+        </div>
+        <div class="feature-card" id="feature-entertain">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2.5" />
+              <path d="M20 16l8 4-8 4V16z" fill="currentColor" />
+              <line x1="16" y1="40" x2="32" y2="40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="24" y1="32" x2="24" y2="40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Entertain & Announce</h3>
+          <p class="feature-desc">Music, announcements, and interactive fun. BaB keeps the crowd engaged and the energy
+            alive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PERFECT FOR ========== -->
+  <section class="perfect-for" id="perfect-for">
+    <div class="section-container">
+      <p class="section-eyebrow">Perfect For</p>
+      <h2 class="section-title">Every Event, Elevated</h2>
+    </div>
+    <div class="marquee-track">
+      <div class="marquee-content events-marquee-content">
+        <!-- Original 14 items -->
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">💍</span>
+          <h3 class="event-title">Weddings</h3>
+          <p class="event-desc">Grand Tamil Nadu weddings deserving a grand entrance.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎓</span>
+          <h3 class="event-title">School Annual Days</h3>
+          <p class="event-desc">Unforgettable experiences for young audiences.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎪</span>
+          <h3 class="event-title">College Events</h3>
+          <p class="event-desc">The tech centerpiece for every college fest.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🏢</span>
+          <h3 class="event-title">Corporate Functions</h3>
+          <p class="event-desc">Professional, polished, and impressive.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🚀</span>
+          <h3 class="event-title">Product Launches</h3>
+          <p class="event-desc">Make your next big reveal unforgettable.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🤝</span>
+          <h3 class="event-title">Trade Shows &amp; Expos</h3>
+          <p class="event-desc">Draw massive crowds to your booth.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎤</span>
+          <h3 class="event-title">Conferences</h3>
+          <p class="event-desc">Engage attendees and spark conversations.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🪔</span>
+          <h3 class="event-title">Cultural &amp; Traditional Festivals</h3>
+          <p class="event-desc">A perfect blend of heritage and innovation.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🌟</span>
+          <h3 class="event-title">Community Galas</h3>
+          <p class="event-desc">Gatherings filled with joy and futuristic fun.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🛕</span>
+          <h3 class="event-title">Religious/Temple Festivals</h3>
+          <p class="event-desc">A modern touch to timeless traditions.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🏡</span>
+          <h3 class="event-title">Housewarming Parties</h3>
+          <p class="event-desc">Welcome guests to your new home in style.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎉</span>
+          <h3 class="event-title">Niche &amp; Fun Events</h3>
+          <p class="event-desc">Whatever the occasion, BaB brings the party.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎂</span>
+          <h3 class="event-title">Birthday Parties</h3>
+          <p class="event-desc">Create magical moments for all ages.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🛍️</span>
+          <h3 class="event-title">Store Grand Openings</h3>
+          <p class="event-desc">Drive foot traffic and create a buzz.</p>
+        </div>
+
+        <!-- Duplicated items for CSS infinite scroll loop -->
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">💍</span>
+          <h3 class="event-title">Weddings</h3>
+          <p class="event-desc">Grand Tamil Nadu weddings deserving a grand entrance.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎓</span>
+          <h3 class="event-title">School Annual Days</h3>
+          <p class="event-desc">Unforgettable experiences for young audiences.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎪</span>
+          <h3 class="event-title">College Events</h3>
+          <p class="event-desc">The tech centerpiece for every college fest.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🏢</span>
+          <h3 class="event-title">Corporate Functions</h3>
+          <p class="event-desc">Professional, polished, and impressive.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🚀</span>
+          <h3 class="event-title">Product Launches</h3>
+          <p class="event-desc">Make your next big reveal unforgettable.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🤝</span>
+          <h3 class="event-title">Trade Shows &amp; Expos</h3>
+          <p class="event-desc">Draw massive crowds to your booth.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎤</span>
+          <h3 class="event-title">Conferences</h3>
+          <p class="event-desc">Engage attendees and spark conversations.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🪔</span>
+          <h3 class="event-title">Cultural &amp; Traditional Festivals</h3>
+          <p class="event-desc">A perfect blend of heritage and innovation.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🌟</span>
+          <h3 class="event-title">Community Galas</h3>
+          <p class="event-desc">Gatherings filled with joy and futuristic fun.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🛕</span>
+          <h3 class="event-title">Religious/Temple Festivals</h3>
+          <p class="event-desc">A modern touch to timeless traditions.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🏡</span>
+          <h3 class="event-title">Housewarming Parties</h3>
+          <p class="event-desc">Welcome guests to your new home in style.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎉</span>
+          <h3 class="event-title">Niche &amp; Fun Events</h3>
+          <p class="event-desc">Whatever the occasion, BaB brings the party.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🎂</span>
+          <h3 class="event-title">Birthday Parties</h3>
+          <p class="event-desc">Create magical moments for all ages.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-emoji" aria-hidden="true">🛍️</span>
+          <h3 class="event-title">Store Grand Openings</h3>
+          <p class="event-desc">Drive foot traffic and create a buzz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY (LOOPING) ========== -->
+  <section class="gallery" id="gallery">
+    <div class="section-container">
+      <p class="section-eyebrow">Gallery</p>
+      <h2 class="section-title">BaB in Action</h2>
+    </div>
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <!-- Original 5 placeholders + Duplicate for smooth loop -->
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f0f0f0, #e8e8e8);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BaB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f5f5f0, #ece8e0);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f0f5f0, #e0ece0);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f5f0f5, #ece0ec);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f5f5e8, #ece8d8);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <!-- Duplicated items for smooth looping -->
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f0f0f0, #e8e8e8);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f5f5f0, #ece8e0);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f0f5f0, #e0ece0);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f5f0f5, #ece0ec);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+        <div class="marquee-item" style="background: linear-gradient(135deg, #f5f5e8, #ece8d8);">
+          <svg viewBox="0 0 120 80" fill="none">
+            <rect x="30" y="15" width="60" height="50" rx="12" fill="#ddd" />
+            <circle cx="50" cy="37" r="5" fill="#bbb" />
+            <circle cx="70" cy="37" r="5" fill="#bbb" />
+            <path d="M52 48q8 6 16 0" stroke="#bbb" stroke-width="2" fill="none" stroke-linecap="round" /><text x="60"
+              y="75" text-anchor="middle" font-size="6" fill="#999" font-family="Inter, sans-serif">BoB Event</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MEET OUR ROBOTS ========== -->
+  <section class="robots" id="robots">
+    <div class="section-container">
+      <p class="section-eyebrow">The Fleet</p>
+      <h2 class="section-title">Meet Our Robots</h2>
+      <div class="robots-list">
+
+        <!-- Robot 1 -->
+        <div class="robot-showcase" id="robot-1">
+          <div class="robot-info">
+            <h3 class="robot-name">Suvai – Dining Service Robot</h3>
+            <p class="robot-role">Dining & Delivery Service</p>
+            <p class="robot-desc">Suvai is an intelligent dining robot designed to enhance guest experiences at events
+              by delivering refreshments, sweets, flowers, or whatever the need may be. With its sleek tray system and
+              interactive voice prompts, Suvai brings a blend of efficiency, technology, and hospitality to modern event
+              settings.</p>
+            <ul class="robot-features">
+              <li>Smart Serving System</li>
+              <li>Interactive Voice Commands</li>
+              <li>Elevated Guest Experience</li>
+            </ul>
+          </div>
+          <div class="robot-image-placeholder">
+            <div class="placeholder-box">
+              <img src="assets/images/robot_suvai.jpg" alt="Suvai – Dining Service Robot"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Robot 2 -->
+        <div class="robot-showcase reverse" id="robot-2">
+          <div class="robot-info">
+            <h3 class="robot-name">Smiley – Selfie Robot</h3>
+            <p class="robot-role">Interactive Photo & Print</p>
+            <p class="robot-desc">Smiley is an interactive selfie robot designed to capture memorable moments at events.
+              It moves through the venue clicking photos of guests and instantly printing them, while also offering easy
+              digital access through a scan of a QR code.</p>
+            <ul class="robot-features">
+              <li>Instant Photo Printing</li>
+              <li>Easy Digital Access</li>
+              <li>Static or Roaming Mode</li>
+            </ul>
+          </div>
+          <div class="robot-image-placeholder">
+            <div class="placeholder-box">
+              <img src="assets/images/robot_smiley.jpg" alt="Smiley – Selfie Robot"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Robot 3 -->
+        <div class="robot-showcase" id="robot-3">
+          <div class="robot-info">
+            <h3 class="robot-name">Robo Dog – Entertainment Robot</h3>
+            <p class="robot-role">Interactive & Fun Experience</p>
+            <p class="robot-desc">Robo Dog is an interactive robotic companion designed purely for entertainment at
+              events. With its playful movements and expressive gestures, it delights both kids and adults, adding a fun
+              and engaging element to the overall event experience.</p>
+            <ul class="robot-features">
+              <li>Interactive Gestures</li>
+              <li>Crowd Engagement</li>
+              <li>Great Photo Opportunity</li>
+            </ul>
+          </div>
+          <div class="robot-image-placeholder">
+            <div class="placeholder-box">
+              <img src="assets/images/robot_dog.jpg" alt="Robo Dog – Entertainment Robot"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SLOT BOOKING ========== -->
+  <section class="booking" id="booking">
+    <div class="section-container">
+      <div class="booking-card">
+        <div class="booking-content">
+          <p class="section-eyebrow">Availability</p>
+          <h2 class="section-title" style="margin-bottom: 24px;">Check & Book Your Date</h2>
+          <p class="booking-desc">Our calendar fills up fast during wedding and festival seasons. Secure your slot early
+            to avoid disappointment.</p>
+        </div>
+        <form class="booking-form" action="#" method="POST"
+          onsubmit="event.preventDefault(); window.open('https://wa.me/919876543210?text=Hi%20BookaBot!%20I%20would%20like%20to%20check%20availability%20for%20my%20event.', '_blank');">
+          <div class="form-group">
+            <label for="bot-type">Bot Selection</label>
+            <div class="custom-select-wrapper">
+              <select id="bot-type" name="bot-type" required>
+                <option value="" disabled selected>Select a Bot</option>
+                <option value="suvai">Suvai – Dining Service Robot</option>
+                <option value="smiley">Smiley – Selfie Robot</option>
+                <option value="robodog">Robo Dog – Entertainment Robot</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="event-date">Event Date</label>
+            <input type="text" id="event-date" name="event-date" placeholder="Select a Date" required>
+          </div>
+          <button type="submit" class="btn btn-primary booking-submit">Check Availability</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="cta-final" id="cta-final">
+    <div class="section-container">
+      <h2 class="cta-title">Ready to Elevate Your Event?</h2>
+      <p class="cta-desc">BookaBot for your next event and give your guests an experience they'll never forget.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+        <a href="https://wa.me/919876543210?text=Hi%20BookaBot!%20I%27d%20like%20to%20book%20a%20robot%20for%20my%20event."
+          class="btn btn-accent" id="cta-final-btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="BookaBot Home">
+            <svg viewBox="0 0 100 100" height="40" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">
+              <rect width="100" height="100" rx="20" fill="#000000" />
+              <line x1="50" y1="25" x2="50" y2="35" stroke="#C6FF35" stroke-width="5" stroke-linecap="round" />
+              <circle cx="50" cy="22" r="4" fill="#C6FF35" />
+              <rect x="22" y="38" width="56" height="28" rx="14" fill="none" stroke="#C6FF35" stroke-width="5" />
+              <circle cx="38" cy="52" r="5.5" fill="#C6FF35" />
+              <circle cx="62" cy="52" r="5.5" fill="#C6FF35" />
+            </svg>
+            <svg viewBox="0 0 240 50" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+                letter-spacing="-1.5">B</text>
+              <g transform="translate(30, 10)">
+                <rect x="0" y="0" width="56" height="28" rx="14" fill="none" stroke="var(--accent)" stroke-width="6" />
+                <circle cx="17" cy="14" r="5" fill="var(--accent)" />
+                <circle cx="39" cy="14" r="5" fill="var(--accent)" />
+                <line x1="28" y1="0" x2="28" y2="-8" stroke="var(--accent)" stroke-width="4" />
+                <circle cx="28" cy="-8" r="3.5" fill="var(--accent)" />
+              </g>
+              <text x="88" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+                letter-spacing="-1.5">kaBot</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">The Future of Hospitality</p>
+          <p class="footer-copy">&copy; 2026 BookaBot. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <a href="#robots">Meet Our Robots</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#perfect-for">Ideas</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="mailto:hello@bookabot.in">hello@bookabot.in</a>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+          <p>Tamil Nadu, India</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/919876543210?text=Hi%20BOOKaBot!%20I%27d%20like%20to%20book%20a%20robot%20for%20my%20event."
+    class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Book via WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.5 1.74 6.45L3 29l6.72-1.72A12.93 12.93 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.7a10.65 10.65 0 01-5.44-1.49l-.39-.23-3.99 1.05 1.07-3.9-.25-.4A10.67 10.67 0 015.3 16c0-5.9 4.8-10.7 10.7-10.7S26.7 10.1 26.7 16 21.9 26.7 16 26.7zm5.86-8.01c-.32-.16-1.9-.94-2.2-1.05-.29-.1-.5-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.58-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.15-.15.32-.38.48-.57.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.57-.08-.16-.72-1.73-.98-2.37-.26-.63-.53-.54-.72-.55h-.62c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.67 0 1.58 1.15 3.1 1.31 3.31.16.21 2.26 3.45 5.47 4.84.77.33 1.37.53 1.83.68.77.24 1.47.21 2.02.13.62-.1 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z"
+        fill="#000000" />
+    </svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

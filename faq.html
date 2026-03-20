@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — BookaBot</title>
+  <meta name="description"
+    content="Frequently asked questions about BookaBot (BaB) — battery life, photo printing, dining robots, event suitability, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="BookaBot Home">
+        <svg viewBox="0 0 100 100" height="32" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">
+          <rect width="100" height="100" rx="20" fill="#000000" />
+          <!-- Antenna -->
+          <line x1="50" y1="25" x2="50" y2="35" stroke="#C6FF35" stroke-width="5" stroke-linecap="round" />
+          <circle cx="50" cy="22" r="4" fill="#C6FF35" />
+          <!-- Head pill -->
+          <rect x="22" y="38" width="56" height="28" rx="14" fill="none" stroke="#C6FF35" stroke-width="5" />
+          <!-- Eyes -->
+          <circle cx="38" cy="52" r="5.5" fill="#C6FF35" />
+          <circle cx="62" cy="52" r="5.5" fill="#C6FF35" />
+        </svg>
+        <svg viewBox="0 0 240 50" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+            letter-spacing="-1.5">B</text>
+          <!-- Robot Face 'oo' -->
+          <g transform="translate(30, 10)">
+            <rect x="0" y="0" width="56" height="28" rx="14" fill="none" stroke="var(--accent)" stroke-width="6" />
+            <circle cx="17" cy="14" r="5" fill="var(--accent)" />
+            <circle cx="39" cy="14" r="5" fill="var(--accent)" />
+            <line x1="28" y1="0" x2="28" y2="-8" stroke="var(--accent)" stroke-width="4" />
+            <circle cx="28" cy="-8" r="3.5" fill="var(--accent)" />
+          </g>
+          <text x="88" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+            letter-spacing="-1.5">kaBot</text>
+        </svg>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#robots">Meet Our Robots</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#perfect-for">Ideas</a></li>
+        <li><a href="faq.html" class="nav-active">FAQ</a></li>
+        <li><a href="index.html#cta-final" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== FAQ HERO ========== -->
+  <section class="faq-hero">
+    <div class="section-container">
+      <p class="section-eyebrow">Got Questions?</p>
+      <h1 class="section-title" style="margin-bottom: 16px;">Frequently Asked Questions</h1>
+      <p class="faq-hero-desc">Everything you need to know about our robots, services, and how we make your events
+        unforgettable.</p>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="faq-list">
+
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+            <span>How long can the robots operate during an event?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-1">
+            <p>All our robots come with up to 8 hours of battery life, ensuring uninterrupted performance for most event
+              durations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+            <span>Are the robots suitable for all types of events?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-2">
+            <p>Yes, our robots are designed to enhance a wide range of events including corporate functions, weddings,
+              exhibitions, and private parties.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+            <span>Do the robots require supervision?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-3">
+            <p>Yes, one or more of our trained staffs are typically present to ensure smooth functioning and assist with
+              interactions if needed.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+            <span>How do guests receive their photos?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-4">
+            <p>Photos can be printed instantly, accessed via QR code, or transferred through a pen drive.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+            <span>How many photos can be printed during an event?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-5">
+            <p>Each roll supports up to 150 prints, and additional rolls can be provided at an extra cost.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-6">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+            <span>Can the photo rolls be replaced during the event?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-6">
+            <p>Yes, rolls can be changed mid-event to continue functioning as intended.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-7">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+            <span>What can the dining robot serve?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-7">
+            <p>Suvai, our dining robot, can present a variety of items such as refreshments, desserts, and event
+              offerings depending on your requirement.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-8">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
+            <span>Does the robot have multiple trays?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-8">
+            <p>Yes, it comes with one tray and can be upgraded to a two-tray setup for increased serving capacity.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ CTA ========== -->
+  <section class="faq-cta">
+    <div class="section-container">
+      <h2 class="faq-cta-title">Still have questions?</h2>
+      <p class="faq-cta-desc">We're just a message away. Reach out and we'll get back to you in no time.</p>
+      <a href="https://wa.me/919876543210?text=Hi%20BookaBot!%20I%20have%20a%20question." class="btn btn-accent"
+        id="faq-cta-btn">Chat with Us</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="BookaBot Home">
+            <svg viewBox="0 0 100 100" height="40" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">
+              <rect width="100" height="100" rx="20" fill="#000000" />
+              <line x1="50" y1="25" x2="50" y2="35" stroke="#C6FF35" stroke-width="5" stroke-linecap="round" />
+              <circle cx="50" cy="22" r="4" fill="#C6FF35" />
+              <rect x="22" y="38" width="56" height="28" rx="14" fill="none" stroke="#C6FF35" stroke-width="5" />
+              <circle cx="38" cy="52" r="5.5" fill="#C6FF35" />
+              <circle cx="62" cy="52" r="5.5" fill="#C6FF35" />
+            </svg>
+            <svg viewBox="0 0 240 50" height="40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+                letter-spacing="-1.5">B</text>
+              <g transform="translate(30, 10)">
+                <rect x="0" y="0" width="56" height="28" rx="14" fill="none" stroke="var(--accent)" stroke-width="6" />
+                <circle cx="17" cy="14" r="5" fill="var(--accent)" />
+                <circle cx="39" cy="14" r="5" fill="var(--accent)" />
+                <line x1="28" y1="0" x2="28" y2="-8" stroke="var(--accent)" stroke-width="4" />
+                <circle cx="28" cy="-8" r="3.5" fill="var(--accent)" />
+              </g>
+              <text x="88" y="38" font-family="Inter, sans-serif" font-weight="900" font-size="42"
+                letter-spacing="-1.5">kaBot</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">The Future of Hospitality</p>
+          <p class="footer-copy">&copy; 2026 BookaBot. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <a href="index.html#robots">Meet Our Robots</a>
+          <a href="index.html#gallery">Gallery</a>
+          <a href="index.html#perfect-for">Ideas</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="mailto:hello@bookabot.in">hello@bookabot.in</a>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+          <p>Tamil Nadu, India</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/919876543210?text=Hi%20BookaBot!%20I%27d%20like%20to%20book%20a%20robot%20for%20my%20event."
+    class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Book via WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.5 1.74 6.45L3 29l6.72-1.72A12.93 12.93 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.7a10.65 10.65 0 01-5.44-1.49l-.39-.23-3.99 1.05 1.07-3.9-.25-.4A10.67 10.67 0 015.3 16c0-5.9 4.8-10.7 10.7-10.7S26.7 10.1 26.7 16 21.9 26.7 16 26.7zm5.86-8.01c-.32-.16-1.9-.94-2.2-1.05-.29-.1-.5-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.58-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.15-.15.32-.38.48-.57.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.57-.08-.16-.72-1.73-.98-2.37-.26-.63-.53-.54-.72-.55h-.62c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.67 0 1.58 1.15 3.1 1.31 3.31.16.21 2.26 3.45 5.47 4.84.77.33 1.37.53 1.83.68.77.24 1.47.21 2.02.13.62-.1 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z"
+        fill="#000000" />
+    </svg>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ---- Mobile Nav Toggle ----
+      const navToggle = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.classList.remove('active');
+          navLinks.classList.remove('open');
+        });
+      });
+
+      // ---- Navbar Scroll Effect ----
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 60) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // ---- FAQ Accordion ----
+      const faqButtons = document.querySelectorAll('.faq-question');
+
+      faqButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement;
+          const isOpen = item.classList.contains('open');
+
+          // Close all items
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          });
+
+          // Toggle clicked item
+          if (!isOpen) {
+            item.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // ---- Intersection Observer: Reveal on Scroll ----
+      const revealElements = document.querySelectorAll(
+        '.faq-item, .section-eyebrow, .section-title, .faq-hero-desc, .faq-cta-title, .faq-cta-desc, .btn-accent'
+      );
+
+      revealElements.forEach(el => el.classList.add('reveal'));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // Stagger FAQ items
+      document.querySelectorAll('.faq-item').forEach((item, i) => {
+        item.style.transitionDelay = `${i * 60}ms`;
+      });
+    });
+  </script>
+
+</body>
+
+</html>
