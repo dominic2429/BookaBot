@@ -163,4 +163,91 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ---- Advanced Seamless True Parallax Engine ----
+    const heroWrapper = document.querySelector('.hero-robot-wrapper');
+    const featuresSection = document.getElementById('features');
+    if (heroWrapper && featuresSection) {
+        let parallaxData = [];
+        
+        const initParallax = () => {
+            const bots = [
+                { wrap: document.getElementById('hero-bot-1-wrap'), target: document.getElementById('icon-welcome') },
+                { wrap: document.getElementById('hero-bot-2-wrap'), target: document.getElementById('icon-serve') },
+                { wrap: document.getElementById('hero-bot-3-wrap'), target: document.getElementById('icon-entertain') }
+            ];
+            
+            if (!bots[0].wrap || !bots[0].target) return;
+            
+            // Temporary disable transform to read true CSS source coordinates
+            bots.forEach(b => b.wrap.style.transform = '');
+            
+            parallaxData = bots.map(b => {
+                const startRect = b.wrap.getBoundingClientRect();
+                const targetRect = b.target.getBoundingClientRect();
+                
+                // Document absolute coordinates
+                const startX = startRect.left + startRect.width / 2 + window.scrollX;
+                const startY = startRect.top + startRect.height / 2 + window.scrollY;
+                
+                const destX = targetRect.left + targetRect.width / 2 + window.scrollX;
+                const destY = targetRect.top + targetRect.height / 2 + window.scrollY;
+                
+                const scaleW = targetRect.width / startRect.width;
+                const scaleH = targetRect.height / startRect.height;
+                
+                return {
+                    wrap: b.wrap,
+                    destY: destY,
+                    deltaX: destX - startX,
+                    deltaY: destY - startY,
+                    // use the smallest scale constraint so tall/wide images fit inside the box
+                    scale: Math.min(scaleW, scaleH)
+                };
+            });
+            updateParallax();
+        };
+        
+        const updateParallax = () => {
+            if (!parallaxData.length) return;
+            
+            const scrollY = window.scrollY;
+            
+            parallaxData.forEach((data, i) => {
+                // Dynamically calculate start and end points per bot.
+                // On mobile, this prevents bots from moving too early and hovering over previous cards.
+                // They wait in the Hero position (progress=0) until their card nears the screen bottom.
+                let startScroll = data.destY - window.innerHeight * 1.1;
+                startScroll = Math.max(0, startScroll); // clamp to 0 for desktop/first card
+
+                const endScroll = data.destY - window.innerHeight * 0.65;
+                
+                let progress = 0;
+                if (endScroll > startScroll) {
+                    progress = (scrollY - startScroll) / (endScroll - startScroll);
+                } else {
+                    progress = scrollY >= endScroll ? 1 : 0;
+                }
+                
+                progress = Math.max(0, Math.min(1, progress)); // clamp 0 to 1
+                
+                // Smooth easing curve (easeInOutQuad)
+                const ease = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+                
+                const curX = data.deltaX * ease;
+                const curY = data.deltaY * ease;
+                
+                // Scale dynamically sizes down the bot exactly to the feature icon width
+                // We add a tiny offset so the size pops slightly as it lands
+                const curScale = 1 - ((1 - data.scale) * Math.min(ease * 1.1, 1));
+                
+                data.wrap.style.transform = `translate(${curX}px, ${curY}px) scale(${curScale})`;
+            });
+        };
+        
+        // Wait briefly for layout shift resolutions
+        setTimeout(initParallax, 50);
+        window.addEventListener('resize', initParallax);
+        window.addEventListener('scroll', updateParallax, { passive: true });
+    }
+
 });
